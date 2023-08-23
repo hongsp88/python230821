@@ -24,6 +24,13 @@ f.close()
 
 # 파일 읽기
 f = open(r"c:\work\demo.txt", "rt", encoding="utf-8")
+while True:
+    val = f.readline()
+    if val == "":
+        break
+    print(val)
+
+f.seek(0)
 result = f.read()
 print(result)
 f.close()
